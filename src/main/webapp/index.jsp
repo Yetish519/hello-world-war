@@ -6,8 +6,8 @@
 	<h1>Hello World!</h1>
 	<p>
 		It is now
-		<%= new java.util.Date() %></p>
+		Friday
 	<p>
 		You are coming from 
-		<%= request.getRemoteAddr()  %></p>
+		Bangalore
 </body>
