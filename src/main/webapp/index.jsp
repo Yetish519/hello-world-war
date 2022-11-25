@@ -7,5 +7,5 @@
 	<p>
 		It is now 1:00 PM
 	<p>
-		You are coming from Bangalore
+		You are coming from Devops Class Bangalore
 </body>
