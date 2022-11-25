@@ -5,9 +5,8 @@
 <body>
 	<h1>Hello World!</h1>
 	<p>
-		It is now
-		weekday
+		It is now 11:00 AM
 	<p>
 		You are coming from 
-		Bangalore is cool
+		Bangalore 
 </body>
