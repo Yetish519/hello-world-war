@@ -8,5 +8,5 @@
 		It is now 11:00 AM
 	<p>
 		You are coming from 
-		Bangalore 
+		shanthi layout
 </body>
