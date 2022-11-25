@@ -6,8 +6,8 @@
 	<h1>Hello World!</h1>
 	<p>
 		It is now
-		Friday and saturday
+		weekday
 	<p>
 		You are coming from 
-		Bangalore
+		Bangalore is cool
 </body>
