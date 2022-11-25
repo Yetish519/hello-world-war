@@ -5,7 +5,7 @@
 <body>
 	<h1>Hello World!</h1>
 	<p>
-		It is now 12:00 PM
+		It is now 1:00 PM
 	<p>
 		You are coming from Bangalore
 </body>
