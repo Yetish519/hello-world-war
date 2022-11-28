@@ -11,5 +11,5 @@
         <p>
 		Company : Microland
 	<P>    
-		Hobbies : Riding, watching movies, cooking and playing cricket
+		Hobbies : watching movies, cooking and playing cricket
 </body>
