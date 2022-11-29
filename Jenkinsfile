@@ -14,6 +14,8 @@ pipeline {
         sh 'sudo sh /opt/apache-tomcat-10.0.27/bin/startup.sh'
       }
     }
+  }
+}
   
       
   
