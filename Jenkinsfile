@@ -1,6 +1,5 @@
 pipeline {
   agent {label 'kanth'}
-  agent {label 'server'}
   stages {
     stage ('my build') {
       steps {
