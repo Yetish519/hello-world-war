@@ -5,11 +5,11 @@
 <body>
 	<h1>Personal Information about Myself!</h1>
 	<p>
-		Name : Yetish S
+		Name : Sharath 
 	<p>
 		Experience : 4 years
         <p>
-		Company : Microland
+		Company : Accenture
 	<P>    
 		Hobbies : watching movies, cooking and playing cricket
 </body>
