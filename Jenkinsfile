@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'server'}
+  agent {label 'kanth'}
   stages {
     stage ('my build') {
       steps {
@@ -9,7 +9,7 @@ pipeline {
   }
 }
     pipeline {
-     agent {label 'kanth'}
+     agent {label 'server'}
       stages {
        stage ('my deploy') {
         steps {
