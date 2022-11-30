@@ -3,13 +3,7 @@
 <title>Hello World!</title>
 </head>
 <body>
-	<h1>Personal Information about Myself!</h1>
+	<h1>India</h1>
 	<p>
-		Name : Yetish 
-	<p>
-		Experience : 4 years
-        <p>
-		Company : Microland
-	<P>    
-		Hobbies : watching movies, cooking and playing cricket
+	India, officially the Republic of India (Hindi: Bhārat Gaṇarājya),[25] is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world.
 </body>
