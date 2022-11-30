@@ -4,7 +4,10 @@ pipeline {
     stage ('my build') {
       steps {
         sh 'mvn package'
-        sh 'whoami'    
+        sh 'whoami' 
+        sh 'ls'
+        sh 'pwd'
+        sh 'scp -R target/hello-world-war-1.0.0.war ubuntu@172.31.4.187:/opt/tomcat/webapps'
       }
     }
 stage ('my deploy') {
