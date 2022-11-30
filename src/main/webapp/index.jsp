@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Welcome to Yetish's site</title>
+<title>Welcome to Yetish's</title>
 </head>
 <body>
 	<h1>Below are the details abolut me</h1>
