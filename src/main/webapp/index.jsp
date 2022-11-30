@@ -1,9 +1,17 @@
 <html>
 <head>
-<title>Hello World!</title>
+<title>Welcome to Yetish's site</title>
 </head>
 <body>
-	<h1>India</h1>
+	<h1>Below are the details abolut me</h1>
+	<h2>1.Yetish S</h2>
+	<h2>2.Working in Microland from 4 years</h2>
+	<h2>3.Hobbies: Travelling, Photography, Photoshop and playing cricket</h2>
+	<h2>4.Hometown:Karnataka</h2>
 	<p>
-	India, officially the Republic of India is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world.
+		It is now
+		<%= new java.util.Date() %></p>
+	<p>
+		You are coming from 
+		<%= request.getRemoteAddr()  %></p>
 </body>
