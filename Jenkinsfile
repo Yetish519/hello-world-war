@@ -12,6 +12,7 @@ pipeline {
         stage('My deploy') { 
         agent {label 'server'}
             steps {
+              sh 'pwd'
               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
               sh 'sleep 2'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
