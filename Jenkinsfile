@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage ('my build') {
       steps {
-        sh 'mvn package'    
+        sh 'mvn package'
+        sh 'whoami'    
       }
     }
 stage ('my deploy') {
@@ -13,6 +14,7 @@ stage ('my deploy') {
         sh 'sudo sh /opt/apache-tomcat-10.0.27/bin/shutdown.sh'
         sh 'sleep 2'
         sh 'sudo sh /opt/apache-tomcat-10.0.27/bin/startup.sh'
+        sh 'whoami'
       }
     }
   }
