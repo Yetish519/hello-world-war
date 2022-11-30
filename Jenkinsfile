@@ -17,7 +17,7 @@ pipeline {
               sh 'sleep 2'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
             }
-        }
+        }
     }
 }
   
