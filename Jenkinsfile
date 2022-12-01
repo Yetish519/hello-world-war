@@ -14,7 +14,7 @@ pipeline {
             steps {
               sh 'pwd'
               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
-              sh 'sleep 2'
+              sh 'sleep 3'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
             }
         }
