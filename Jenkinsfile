@@ -1,9 +1,11 @@
 pipeline {
-    agent {label 'kanth'} 
+    agent none
     stages {
         stage('My Build') { 
+            agent {label 'kanth'}
             steps {
-              sh 'mvn package'
+              sh "echo ${BUILD_VERSION}"
+              sh 'mvn deploy'
               sh 'pwd'
               sh 'whoami'
               sh 'scp -R /home/kanth/workspace/pipeline_delarative/target/hello-world-war-1.0.0.war server@172.31.35.213:/opt/tomcat/webapps'
