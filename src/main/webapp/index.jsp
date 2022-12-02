@@ -3,7 +3,7 @@
 <title>Welcome to Yetish's</title>
 </head>
 <body>
-	<h1>Below are the details abolut me</h1>
+	<h1>Below are the details about me</h1>
 	<h2>1.Yetish S</h2>
 	<h2>2.Working in Microland from 4 years</h2>
 	<h2>3.Hobbies: Travelling, playing cricket</h2>
