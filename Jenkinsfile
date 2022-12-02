@@ -7,7 +7,7 @@ pipeline {
               sh "echo ${BUILD_VERSION}"
               sh 'mvn deploy'
               sh 'pwd'
-              sh 'whoami
+              sh 'whoami'
             }
         }
         stage ('My deploy') { 
