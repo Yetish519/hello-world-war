@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage ('My Build') { 
             steps {
-              sh "echo ${BUILD_NUMBER}"
-              sh 'mvn deploy'
+              sh 'mvn package'
               sh 'pwd'
               sh 'whoami'
+              sh 'scp -R /home/kanth/workspace/pipeline_delarative/target/hello-world-war-1.0.0.war server@172.31.35.213:/opt/tomcat/webapps'
             }
         }
         stage ('My deploy') { 
@@ -14,10 +14,8 @@ pipeline {
             steps {
               sh 'pwd'
               sh 'whoami'
-              sh 'curl -u yetish519@gmail.com:Devops@123 -O https://yetish519.jfrog.io/artifactory/libs-release-local/com/efsavage/hello-world-war/${BUILD_NUMBER}/hello-world-war-${BUILD_NUMBER}.war'
-              sh 'sudo cp -R hello-world-war-${BUILD_NUMBER}.war /opt/tomcat/webapps/'
               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
-              sh 'sleep 2'
+              sh 'sleep 3'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
             }
         }
