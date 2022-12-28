@@ -1,7 +1,7 @@
 pipeline {
-    agent {label 'kanth'}
+    agent {label 'server1'}
     stages {
-        stage ('My server1') { 
+        stage ('My Build') { 
             steps {
               sh 'mvn package'
               sh 'pwd'
