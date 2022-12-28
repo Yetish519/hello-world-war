@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'kanth'}
     stages {
-        stage ('My Build') { 
+        stage ('My server1') { 
             steps {
               sh 'mvn package'
               sh 'pwd'
@@ -15,7 +15,7 @@ pipeline {
               sh 'pwd'
               sh 'whoami'
               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
-              sh 'sleep 3'
+              sh 'sleep 2'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
             }
         }
