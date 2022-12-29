@@ -6,7 +6,7 @@ pipeline {
               sh 'mvn package'
               sh 'pwd'
               sh 'whoami'
-              sh 'scp -R /home/server/workspace/pipeline_delarative/hello-world-war-1.1.1.war land@172.31.35.213:/opt/tomcat/webapps'
+              sh 'scp -R /home/land/workspace/pipeline_delarative/target/hello-world-war-71.war land@172.31.35.213:/opt/tomcat/webapps'
             }
         }
         stage ('My deploy') { 
