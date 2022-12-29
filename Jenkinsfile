@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'land'}
+    agent {label 'server'}
     stages {
         stage ('My Build') { 
             steps {
@@ -10,7 +10,7 @@ pipeline {
             }
         }
         stage ('My deploy') { 
-        agent {label 'server'}
+        agent {label 'land'}
             steps {
               sh 'pwd'
               sh 'whoami'
