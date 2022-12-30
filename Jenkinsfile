@@ -6,7 +6,7 @@ pipeline {
               sh 'mvn package'
               sh 'pwd'
               sh 'whoami'
-              sh 'scp -R /home/james/hello-world-war/target/hello-world-war-null.war bond@172.31.14.18:/opt/tomcat/webapps/'
+              sh 'scp -R /home/james/workspace/pipeline_delarative/target/hello-world-war-86.war bond@172.31.14.18:/opt/tomcat/webapps/'
             }
         }
         stage ('My Deploy') { 
