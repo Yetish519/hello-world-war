@@ -6,11 +6,11 @@ pipeline {
               sh 'mvn package'
               sh 'pwd'
               sh 'whoami'
-              sh 'scp -R /home/land/workspace/pipeline_delarative/target/hello-world-war-71.war server@172.31.35.213:/opt/tomcat/webapps'
+              sh 'scp -R /home/bond/hello-world-war/target/hello-world-war-null.war james@172.31.35.213:/opt/tomcat/webapps'
             }
         }
-        stage ('My james') { 
-        agent {label 'server'}
+        stage ('My Deploy') { 
+        agent {label 'james'}
             steps {
               sh 'pwd'
               sh 'whoami'
