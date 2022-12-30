@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'land'}
+    agent {label 'bond'}
     stages {
         stage ('My Build') { 
             steps {
@@ -9,7 +9,7 @@ pipeline {
               sh 'scp -R /home/land/workspace/pipeline_delarative/target/hello-world-war-71.war server@172.31.35.213:/opt/tomcat/webapps'
             }
         }
-        stage ('My deploy') { 
+        stage ('My james') { 
         agent {label 'server'}
             steps {
               sh 'pwd'
