@@ -3,17 +3,19 @@ pipeline {
     stages {
         stage ('My Build') { 
             steps {
-              sh 'mvn package'
+              sh "echo ${BUILD_NUMBER}"
+              sh 'mvn deploy'
               sh 'pwd'
               sh 'whoami'
-              sh 'scp -R /home/james/workspace/pipeline_delarative/target/hello-world-war-1.0.0.war bond@172.31.14.18:/opt/tomcat/webapps/'
             }
         }
-        stage ('My Deploy') { 
+        stage ('My deploy') { 
         agent {label 'bond'}
             steps {
               sh 'pwd'
               sh 'whoami'
+              sh 'curl -u yatibond669@gmail.com:Devops@123 -O https://yati519.jfrog.io/artifactory/maven-remote-cache/hello-world-war/${BUILD_NUMBER}/hello-world-war-${BUILD_NUMBER}.war'
+              sh 'sudo cp -R hello-world-war-${BUILD_NUMBER}.war /opt/tomcat/webapps/'
               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
               sh 'sleep 2'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
