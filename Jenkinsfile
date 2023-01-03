@@ -1,16 +1,16 @@
 pipeline {
-    agent {label 'James'}
+    agent {label 'you'}
     stages {
         stage ('My Build') { 
             steps {
               sh 'mvn package'
               sh 'pwd'
               sh 'whoami'
-              sh 'scp -R /home/james/hello-world-war/target/hello-world-war-1.0.0.war bond@172.31.14.18:/opt/tomcat/webapps/'
+              sh 'scp -R /home/you/hello-world-war/target/hello-world-war-1.0.0.war me@172.31.14.18:/opt/tomcat/webapps/'
             }
         }
         stage ('My deploy') { 
-        agent {label 'bond'}
+        agent {label 'me'}
             steps {
               sh 'pwd'
               sh 'whoami'
