@@ -26,10 +26,9 @@
 		</plugins>
 	</build>
         <distributionManagement>
-                                <repository>
-                                            <id>central</id>
-                                            <name>a0uskih1twcyw-artifactory-primary-0-releases</name>
-                                            <url>https://yetish519.jfrog.io/artifactory/libs-release</url>
-                                </repository>
+    <repository>
+        <id>central</id>
+        <name>a0puolcnwmabq-artifactory-primary-0-releases</name>
+        <url>https://yati519.jfrog.io/artifactory/libs-release</url>
+    </repository>
         </distributionManagement>
-</project>
