@@ -1,12 +1,12 @@
 pipeline {
-    agent {label 'james'}
+    agent {label 'James'}
     stages {
         stage ('My Build') { 
             steps {
-              sh "echo ${BUILD_NUMBER}"
-              sh 'mvn deploy'
+              sh 'mvn package'
               sh 'pwd'
               sh 'whoami'
+              sh 'scp -R /home/server1/(Path)/hello-world-war-1.0.0.war server2@ipaddress:/opt/tomcat/webapps'
             }
         }
         stage ('My deploy') { 
@@ -14,10 +14,8 @@ pipeline {
             steps {
               sh 'pwd'
               sh 'whoami'
-              sh 'curl -u yatibond669@gmail.com:Devops@123 -O https://yati519.jfrog.io/artifactory/libs-release-local/com/efsavagehello-world-war/${BUILD_NUMBER}/hello-world-war-${BUILD_NUMBER}.war'
-              sh 'sudo cp -R hello-world-war-${BUILD_NUMBER}.war /opt/tomcat/webapps/'
               sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
-              sh 'sleep 2'
+              sh 'sleep 3'
               sh 'sudo sh /opt/tomcat/bin/startup.sh'
             }
         }
