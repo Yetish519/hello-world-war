@@ -3,24 +3,24 @@ pipeline {
     stages {
         stage('my Build') {
             steps {
-                sh "echo ${BUILD_VERSION}"
-                sh 'docker build -t tomcat_build:${BUILD_VERSION} --build-arg BUILD_VERSION=${BUILD_VERSION} .'
+                sh "echo ${BUILD_NUMBER}"
+                sh 'docker build -t tomcat_build:${BUILD_NUMBER} --build-arg BUILD_VERSION=${BUILD_NUMBER} .'
             }
         }  
         stage('publish stage') {
             steps {
-                sh "echo ${BUILD_VERSION}"
+                sh "echo ${BUILD_NUMBER}"
                 sh 'docker login -u yetish519 -p Yetibond&519'
-                sh 'docker tomcat_build:${BUILD_VERSION} yetish519/tomcat_maven:${BUILD_VERSION}'
-                sh 'docker push yetish519/tomcat_maven:${BUILD_VERSION}'
+                sh 'docker tomcat_build:${BUILD_NUMBER} yetish519/tomcat_maven:${BUILD_NUMBER}'
+                sh 'docker push yetish519/tomcat_maven:${BUILD_NUMBER}'
             }
         } 
         stage( 'my deploy' ) {
         agent {label 'me'} 
             steps {
-               sh 'docker pull yetish519/tomcat_maven:${BUILD_VERSION}'
+               sh 'docker pull yetish519/tomcat_maven:${BUILD_NUMBER}'
                sh 'docker rm -f mytomcat'
-               sh 'docker run -d -p 8080:8080 --name mytomcat yetish519/tomcat_maven:${BUILD_VERSION}'
+               sh 'docker run -d -p 8080:8080 --name mytomcat yetish519/tomcat_maven:${BUILD_NUMBER}'
             }
         }    
     } 
